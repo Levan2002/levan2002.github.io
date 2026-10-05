@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>How to see who doesn&#x27;t follow you back on Instagram (without logging in to an app) – Backfollow</title>
+<meta name="description" content="Three ways to find who doesn&#x27;t follow you back on Instagram: by hand, with a spreadsheet, or from your official data export, without giving any app your password.">
+<link rel="canonical" href="https://levan2002.github.io/backfollow/guides/who-doesnt-follow-you-back-on-instagram.html">
+<link rel="icon" href="../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to see who doesn&#x27;t follow you back on Instagram (without logging in to an app) – Backfollow">
+<meta property="og:description" content="Three ways to find who doesn&#x27;t follow you back on Instagram: by hand, with a spreadsheet, or from your official data export, without giving any app your password.">
+<meta property="og:url" content="https://levan2002.github.io/backfollow/guides/who-doesnt-follow-you-back-on-instagram.html">
+<meta property="og:site_name" content="Backfollow">
+<meta name="twitter:card" content="summary">
+<meta name="apple-itunes-app" content="app-id=6819347226">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "How to see who doesn't follow you back on Instagram (without logging in to an app)",
+ "description": "Three ways to find who doesn't follow you back on Instagram: by hand, with a spreadsheet, or from your official data export, without giving any app your password.",
+ "author": {
+  "@type": "Person",
+  "name": "Levani Topchishvili"
+ },
+ "publisher": {
+  "@type": "Person",
+  "name": "Levani Topchishvili"
+ },
+ "datePublished": "2026-10-05",
+ "dateModified": "2026-10-05",
+ "mainEntityOfPage": "https://levan2002.github.io/backfollow/guides/who-doesnt-follow-you-back-on-instagram.html"
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Backfollow",
+   "item": "https://levan2002.github.io/backfollow/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Guides",
+   "item": "https://levan2002.github.io/backfollow/guides/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "How to see who doesn't follow you back on Instagram (without logging in to an app)",
+   "item": "https://levan2002.github.io/backfollow/guides/who-doesnt-follow-you-back-on-instagram.html"
+  }
+ ]
+}
+</script>
+</head>
+<body class="guide"><main>
+<header class="site"><img src="../icon.svg" alt="Backfollow app icon"><div><div class="brand"><a href="../">Backfollow</a></div><div class="tag">Unfollowers Check for Instagram &amp; TikTok</div></div></header>
+<nav class="top" aria-label="Site"><a href="../">Home</a><a href="../help.html">Help &amp; FAQ</a><a href="../guides/">Guides</a><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a></nav>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../">Backfollow</a> <span aria-hidden="true">›</span> <a href="./">Guides</a> <span aria-hidden="true">›</span> How to see who doesn't follow you back on Instagram (without logging in to an app)</nav>
+<article>
+<h1>How to see who doesn't follow you back on Instagram (without logging in to an app)</h1>
+<p class="lead">Instagram doesn't give you a simple "doesn't follow you back" list. You can still get a reliable answer, and you don't need to hand your password to a third-party app to do it. Here are three approaches, from slowest to fastest.</p>
+<p class="g-cta-row"><a class="g-cta" href="https://apps.apple.com/app/id6819347226">Get Backfollow on the App Store</a></p>
+<h2>Why not just use an app that asks for your login?</h2>
+<p>Many unfollower apps ask you to sign in with your Instagram username and password. That gives the app the same access you have: it could read your messages, post for you or follow and unfollow in bulk. Even if the developer is honest, a stored password is a liability, and Instagram can flag or lock accounts that are accessed by unofficial tools. You can avoid all of this, because Instagram will give you your own follower and following lists as a file.</p>
+
+<h2>Method 1: compare the lists by hand</h2>
+<p>This costs nothing and needs no extra tools, but it only works well for small accounts.</p>
+<ol class="steps">
+<li>Open your profile and tap <em>Followers</em>. Scroll through and note the usernames.</li>
+<li>Go back and tap <em>Following</em>. For each account you follow, check whether it appeared in your followers list.</li>
+<li>Anyone you follow who is missing from your followers does not follow you back.</li>
+</ol>
+<p>The Following screen lets you search for a name, which makes spot checks easy: search a person in <em>Followers</em>, and if they don't show up, they don't follow you. The weakness is time and accuracy. At a few hundred accounts it is tedious, and at a few thousand it is not realistic.</p>
+
+<h2>Method 2: export the lists and compare in a spreadsheet</h2>
+<p>If you are comfortable with spreadsheets, Instagram's data export gives you both lists as files. After you download them (the <a href="download-instagram-followers-and-following-json.html">export guide</a> shows how), paste the usernames from the followers file into one column and the usernames from the following file into another. A formula such as <code>=COUNTIF(A:A, B2)</code> next to each person you follow tells you whether they appear in your followers: a result of 0 means they don't follow you back. Filter for 0 and you have your list.</p>
+<p>It works, but the JSON files are not spreadsheet-friendly out of the box. You may need to convert them first, and you repeat the whole process each time you want to check again.</p>
+
+<h2>Method 3: read the official export with Backfollow</h2>
+<p>This is the same idea as Method 2 with the work done for you, on your iPhone, with no login.</p>
+<ol class="steps">
+<li>Request your <em>Followers and following</em> from Instagram (Accounts Center → Your information and permissions → Download your information). Choose JSON and the date range <em>All time</em>.</li>
+<li>When Instagram says the file is ready, download the ZIP on your iPhone.</li>
+<li>Open it in Backfollow with <em>Share → Backfollow</em> or the <em>Import</em> button.</li>
+</ol>
+<p>Backfollow reads the file on your device and shows the accounts you follow who don't follow you back, the followers you don't follow back (fans) and your mutuals. If your export includes them, it also shows pending follow requests you sent, accounts you recently unfollowed, close friends and the dates you started following each account. Nothing is uploaded, and there is no Backfollow account.</p>
+<p>For the full steps and screen names, see the <a href="../help.html#export-instagram">help page</a>.</p>
+
+<h2>Reading the result</h2>
+<p>A few things are worth knowing before you act on any list:</p>
+<ul class="feat">
+<li><strong>It is a snapshot.</strong> The list is accurate for the moment you requested the export. If you need current data, request a new one.</li>
+<li><strong>Some accounts will look odd.</strong> Deactivated, deleted or renamed accounts can show up in a list under an old name, or disappear.</li>
+<li><strong>Not following back is not always personal.</strong> Brands, creators, news accounts and people you know in real life often don't follow back, and that is fine.</li>
+<li><strong>Private accounts</strong> that haven't accepted your request are different from accounts that declined to follow back. Pending requests are listed separately.</li>
+</ul>
+
+<h2>If you decide to unfollow people</h2>
+<p>Do it yourself, in the Instagram app. Bulk automation tools break Instagram's rules and can get your account limited, which is worse than a few extra accounts in your Following list. Work through the list a little at a time. Backfollow's review queue (part of Pro) takes you through the non-followers one by one: you either add the account to your keep list or open the profile in Instagram and unfollow it manually. It doesn't unfollow anyone for you.</p>
+
+<h2>Which method should you use?</h2>
+<table>
+<thead><tr><th>Method</th><th>Good for</th><th>Drawback</th></tr></thead>
+<tbody>
+<tr><td>By hand</td><td>Small accounts, one-off checks</td><td>Slow and easy to get wrong</td></tr>
+<tr><td>Spreadsheet</td><td>Comfortable with formulas</td><td>Setup each time, JSON needs converting</td></tr>
+<tr><td>Backfollow</td><td>Regular checks, large accounts</td><td>Needs the export first, which can take minutes to hours</td></tr>
+</tbody></table>
+<p>Whichever you choose, the export route is the one that doesn't involve sharing your password with anyone.</p>
+<h2>Try it in Backfollow</h2>
+<p>Backfollow is a free iPhone app that does the comparison for you, entirely on your phone, with no login. It is free for counts and the first 10 names of each list, and Backfollow Pro unlocks the full lists, history between imports and the review queue.</p>
+<p class="g-cta-row"><a class="g-cta" href="https://apps.apple.com/app/id6819347226">Get Backfollow on the App Store</a></p>
+<p>More: <a href="./">all guides</a> · <a href="../help.html">Help &amp; FAQ</a> · <a href="../privacy.html">Privacy Policy</a></p>
+</article>
+<footer>
+<p><a href="../help.html">Help &amp; FAQ</a> · <a href="../guides/">Guides</a> · <a href="../privacy.html">Privacy Policy</a> · <a href="../terms.html">Terms of Use</a> · <a href="https://github.com/Levan2002/backfollow/issues">Contact</a></p>
+<p>Backfollow is not affiliated with, endorsed or sponsored by Instagram, Meta or TikTok. Instagram, Meta and TikTok are trademarks of their respective owners.</p>
+<p>© 2026 Levani Topchishvili</p>
+</footer>
+</main></body></html>

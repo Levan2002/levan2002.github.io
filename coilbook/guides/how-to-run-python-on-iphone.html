@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Run Python Code on an iPhone, Offline or Online – Coilbook</title>
+<meta name="description" content="How to run Python on an iPhone or iPad: your options (browser, remote machine or on-device interpreter), what to check, typing tips, and a first script.">
+<link rel="canonical" href="https://levan2002.github.io/coilbook/guides/how-to-run-python-on-iphone.html">
+<meta name="theme-color" content="#F7F5F0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15131C" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Run Python Code on an iPhone, Offline or Online – Coilbook">
+<meta property="og:description" content="How to run Python on an iPhone or iPad: your options (browser, remote machine or on-device interpreter), what to check, typing tips, and a first script.">
+<meta property="og:url" content="https://levan2002.github.io/coilbook/guides/how-to-run-python-on-iphone.html">
+<meta property="og:site_name" content="Coilbook">
+<meta name="twitter:card" content="summary">
+<meta name="apple-itunes-app" content="app-id=6818796872">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "How to run Python code on an iPhone, offline or online",
+ "description": "How to run Python on an iPhone or iPad: your options (browser, remote machine or on-device interpreter), what to check, typing tips, and a first script.",
+ "author": {
+  "@type": "Person",
+  "name": "Levani Topchishvili"
+ },
+ "publisher": {
+  "@type": "Person",
+  "name": "Levani Topchishvili"
+ },
+ "datePublished": "2026-10-05",
+ "dateModified": "2026-10-05",
+ "mainEntityOfPage": "https://levan2002.github.io/coilbook/guides/how-to-run-python-on-iphone.html"
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Coilbook home",
+   "item": "https://levan2002.github.io/coilbook/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Guides",
+   "item": "https://levan2002.github.io/coilbook/guides/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "How to run Python code on an iPhone, offline or online",
+   "item": "https://levan2002.github.io/coilbook/guides/how-to-run-python-on-iphone.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#6A4DF5"/><rect x="15" y="12" width="37" height="40" rx="5" fill="#F7F5F0"/><path d="M23 25l7 6-7 6" fill="none" stroke="#6A4DF5" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M33 39h11" stroke="#1B1923" stroke-width="4.5" stroke-linecap="round"/></svg>
+      Coilbook
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="../">Home</a></li>
+        <li><a href="../help.html">Help</a></li>
+        <li><a href="./" aria-current="page">Guides</a></li>
+        <li><a href="../privacy.html">Privacy</a></li>
+        <li><a href="../terms.html">Terms</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap guide-top">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../">Coilbook</a> <span aria-hidden="true">›</span> <a href="./">Guides</a> <span aria-hidden="true">›</span> How to run Python code on an iPhone</nav>
+<article class="guide-art">
+<h1>How to run Python code on an iPhone</h1>
+<p class="lead">An iPhone doesn't come with Python, but you can still write and run it on one. Whether you want to practice between lessons, test a quick idea or run a script on a train, there are a few ways to do it, and each has trade-offs. This guide explains them, what to look for, and how to run your first script on the phone itself.</p>
+<p class="g-cta-row"><a class="btn btn-primary" href="https://apps.apple.com/app/id6818796872">Get Coilbook on the App Store</a></p>
+<h2>Your three options</h2>
+<h3>1. In a web browser</h3>
+<p>Online editors and cloud notebooks run your code on a remote server and show the result in Safari. There's nothing to install, and they can use big packages. But they need a connection, you're often typing into a small text box, and your code is sent to a server.</p>
+<h3>2. On a remote machine</h3>
+<p>If you already have a computer or a cloud server, you can connect to it from your phone with an SSH or remote desktop app and run Python there. It's powerful, but it needs setup and a network, and typing commands into a terminal on a small screen is awkward.</p>
+<h3>3. With an app that includes Python</h3>
+<p>Some apps bundle a Python interpreter, so your code runs on the phone itself. These work offline and start quickly. The trade-off is that you get a fixed version of Python and a fixed set of packages, because you can't simply <code>pip install</code> things the way you can on a computer.</p>
+
+<h2>What to check before you choose</h2>
+<ul class="tips">
+<li><strong>Does it work offline?</strong> If you want to code on a plane or in a basement classroom, it has to.</li>
+<li><strong>Is it real Python?</strong> The reference implementation, CPython, behaves the same as it does on a computer. Lookalikes can differ in surprising ways.</li>
+<li><strong>Which packages are included?</strong> Check for numpy, pandas and matplotlib if you do data work, and whether you can add more.</li>
+<li><strong>Does <code>input()</code> work?</strong> Many beginner programs ask the user a question, and not every environment supports it.</li>
+<li><strong>Can you stop a runaway loop?</strong> A program stuck in <code>while True:</code> shouldn't force you to restart the app.</li>
+<li><strong>Can you get files in and out?</strong> Look for support for the Files app, AirDrop and Mail.</li>
+<li><strong>Is running code free?</strong> Some apps put a limit on runs behind a subscription.</li>
+<li><strong>Where does your code go?</strong> If privacy matters, prefer something that keeps code on your device.</li>
+</ul>
+
+<h2>Tips for typing code on a phone</h2>
+<ul class="tips">
+<li><strong>Beware curly quotes.</strong> iOS can swap straight quotes for curly ones in ordinary text fields, and Python can't read curly quotes: you'll get a <code>SyntaxError</code>. A real code editor avoids this. A notes app doesn't.</li>
+<li><strong>Be consistent with indentation.</strong> Python uses indentation to mark blocks, so stick to four spaces per level. A Tab key and a row of bracket, colon and quote keys above the keyboard save a lot of fiddling.</li>
+<li><strong>Use landscape or an external keyboard</strong> for longer code. For short scripts, portrait is fine.</li>
+<li><strong>Keep programs short.</strong> A phone is great for practice, small tools and notebooks. Larger projects are easier on a computer.</li>
+</ul>
+
+<h2>A first script to try</h2>
+<p>Type this into any Python environment. It asks for your name, then counts to three:</p>
+<figure class="code"><div class="code-bar"><span>hello.py</span></div><pre><code><span class="l">name = input(&quot;Your name? &quot;)</span><span class="l">for n in range(1, 4):</span><span class="l">    print(f&quot;{n}: Hello, {name}!&quot;)</span></code></pre><div class="out"><span class="out-label">Console</span>Your name? Ada
+1: Hello, Ada!
+2: Hello, Ada!
+3: Hello, Ada!</div></figure>
+<p>The first line shows a prompt and waits for you to type. The <code>for</code> loop repeats its indented line three times, with <code>n</code> taking the values 1, 2 and 3, and the <code>f</code> before the quotes lets you drop variables into text with curly braces.</p>
+<h2>Doing it with Coilbook</h2>
+<p>Coilbook is an app with a real CPython 3.14 interpreter inside. Everything runs on your iPhone, so it works in airplane mode.</p>
+<ol class="steps">
+<li>Open Coilbook and go to the <em>Files</em> tab. Tap <em>+</em>, then <em>New Script</em>, and give it a name. Names ending in .py run as Python.</li>
+<li>Type the script. A row above the keyboard has Tab, brackets, colon, quotes, arrows and Undo, and autocomplete suggests keywords, built-in functions and module members as you type.</li>
+<li>Tap <em>Run</em>. The output appears in the console under your code. When the program calls <code>input()</code>, the prompt appears in the console and you type your answer right there.</li>
+<li>If a loop won't end, tap <em>Stop</em>. Coilbook halts the program and keeps what it printed so far.</li>
+<li>For quick one-liners, open the <em>Console</em> tab. It's an interactive Python console where variables stay around between commands. Try <code>2 ** 100</code> or <code>import math</code>.</li>
+<li>When you're ready to learn more, the <em>Learn</em> tab has 12 short lessons that check your answers.</li>
+</ol>
+<p>Your projects are plain folders that also appear in the Files app under On My iPhone › Coilbook. Coilbook includes the standard library and numpy, and the turtle drawing module. pandas and matplotlib need Pro. There's no pip, so you can't add other packages.</p>
+<div class="g-end coil">
+<h2>Try Coilbook</h2>
+<p>Coilbook is a code editor, console and notebook app with CPython 3.14 inside, running entirely on your iPhone, offline. Writing and running code is free forever, with no account, no ads and no tracking. Pro adds pandas and matplotlib, unlimited projects and notebooks, extra editor themes and Explain error: $3.99 a month, $24.99 a year or $49.99 once (US prices).</p>
+<p class="g-cta-row"><a class="btn btn-primary" href="https://apps.apple.com/app/id6818796872">Get Coilbook on the App Store</a></p>
+</div>
+<aside class="g-related">
+<h2>Related guides</h2>
+<ul>
+<li><a href="how-to-open-ipynb-files-on-iphone.html">How to open .ipynb files on an iPhone</a><span>What an .ipynb file is, three ways to open one on a phone, common problems, and how to run and edit it offline.</span></li>
+<li><a href="how-to-learn-python-on-your-iphone.html">How to learn Python on your phone</a><span>A sensible order of topics, how to practice in short sessions, how to read errors, and how to start offline on an iPhone.</span></li>
+</ul>
+<p><a href="./">All Coilbook guides</a> · <a href="../">Coilbook home</a> · <a href="../help.html">Help</a></p>
+</aside>
+</article>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <p style="margin:0">&copy; 2026 Levani Topchishvili</p>
+      <ul class="footer-links">
+        <li><a href="../">Home</a></li>
+        <li><a href="../help.html">Help</a></li>
+        <li><a href="./">Guides</a></li>
+        <li><a href="../privacy.html">Privacy</a></li>
+        <li><a href="../terms.html">Terms</a></li>
+        <li><a href="../licenses.html">Licenses</a></li>
+      </ul>
+    </div>
+    <p class="trademark">&ldquo;Python&rdquo; is a registered trademark of the Python Software Foundation. Coilbook is not affiliated with or endorsed by the Python Software Foundation. Jupyter is a trademark of NumFOCUS; Coilbook is not affiliated with Project Jupyter. Apple, iPhone, iPad, App Store and Apple Intelligence are trademarks of Apple Inc.</p>
+  </div>
+</footer>
+</body></html>

@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coilbook – Python on iPhone, offline</title>
+  <meta name="description" content="Coilbook is a code editor, console and .ipynb notebook app that runs Python 3.14 entirely on your iPhone, offline. numpy, turtle and the full standard library included. Free to run, always.">
+  <link rel="canonical" href="https://levan2002.github.io/coilbook/">
+  <meta name="theme-color" content="#F7F5F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#15131C" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Coilbook">
+  <meta property="og:title" content="Coilbook – Python that runs on your iPhone">
+  <meta property="og:description" content="Editor, console and Jupyter-compatible notebooks running CPython 3.14 on device. No account, no ads, no tracking.">
+  <meta property="og:url" content="https://levan2002.github.io/coilbook/">
+  <meta name="twitter:card" content="summary">
+  <meta name="apple-itunes-app" content="app-id=6818796872">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Coilbook",
+    "operatingSystem": "iOS",
+    "applicationCategory": "DeveloperApplication",
+    "description": "A code editor, console and Jupyter-compatible notebooks that run Python 3.14 (CPython) entirely on the iPhone, offline.",
+    "url": "https://levan2002.github.io/coilbook/",
+    "downloadUrl": "https://apps.apple.com/app/id6818796872",
+    "author": { "@type": "Person", "name": "Levani Topchishvili" },
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I run Python on iPhone or iPad offline?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Coilbook includes a full CPython 3.14 interpreter that runs on the device itself, so scripts, notebooks, the console and the lessons all work with no internet connection. It is made for iPhone, and iPad can run it as an iPhone app." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Coilbook support pip?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Coilbook does not download packages from the internet. It ships with the full standard library plus numpy, pandas and matplotlib (and their dependencies: Pillow, contourpy, kiwisolver, fonttools, cycler, pyparsing, python-dateutil, pytz, tzdata, six and packaging), all built in and ready to import." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I open Jupyter notebooks?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Coilbook opens and saves .ipynb files in the Jupyter-compatible format, with code and Markdown cells, inline results, pandas tables and matplotlib plots. You can also export a notebook as a .py script. Coilbook is not affiliated with Project Jupyter." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#6A4DF5"/><rect x="15" y="12" width="37" height="40" rx="5" fill="#F7F5F0"/><path d="M23 25l7 6-7 6" fill="none" stroke="#6A4DF5" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M33 39h11" stroke="#1B1923" stroke-width="4.5" stroke-linecap="round"/></svg>
+      Coilbook
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="./" aria-current="page">Home</a></li>
+        <li><a href="help.html">Help</a></li>
+        <li><a href="guides/">Guides</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">CPython 3.14 · on device · offline</span>
+        <h1 id="hero-title">Python that runs on your iPhone. <span class="accent">Free to run, always.</span></h1>
+        <p class="lede">Coilbook is a code editor, console and notebook app with a real Python interpreter inside. Write a script, tap Run, see the output. No server, no account, no signal required.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6818796872">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>
+            Get it on the App Store
+          </a>
+          <a class="btn btn-ghost" href="help.html">Read the guides</a>
+        </div>
+        <p class="fineprint">Writing and running code is free forever. Pro adds pandas, matplotlib and a few extras.</p>
+      </div>
+
+      <figure class="code" aria-label="A short Python script in Coilbook and the output it prints">
+        <div class="code-bar"><span>hello.py</span><span class="run" aria-hidden="true">&#9654; Run</span></div>
+<pre><code><span class="l"><span class="k">import</span> numpy <span class="k">as</span> np</span><span class="l"> </span><span class="l">name = <span class="f">input</span>(<span class="s">"Your name? "</span>)</span><span class="l">xs = np.<span class="f">linspace</span>(<span class="n">0</span>, <span class="n">1</span>, <span class="n">5</span>)</span><span class="l"><span class="f">print</span>(<span class="s">f"Hi {name}! sum = {xs.sum()}"</span>)</span></code></pre>
+        <div class="out"><span class="out-label">Console</span>Your name? <span class="typed">Ada</span>
+Hi Ada! sum = 2.5</div>
+      </figure>
+    </div>
+  </section>
+
+  <section id="features" aria-labelledby="features-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag"># what's inside</span>
+        <h2 id="features-title">A whole Python workbench, bound into one app</h2>
+        <p>Everything runs locally on your iPhone, so it's fast to start and works on a plane, a train or a basement classroom.</p>
+      </div>
+
+      <div class="grid">
+        <article class="coil feature">
+          <h3><span class="glyph" aria-hidden="true">{}</span>Editor</h3>
+          <ul>
+            <li>Syntax highlighting and line numbers</li>
+            <li>Extra key row: Tab, brackets, colon, quotes, arrows, undo</li>
+            <li>Autocomplete for keywords, builtins and module members like <code>np.linspace</code></li>
+            <li>Find and replace</li>
+          </ul>
+        </article>
+
+        <article class="coil feature">
+          <h3><span class="glyph" aria-hidden="true">&gt;_</span>Console</h3>
+          <ul>
+            <li>See <code>print</code> output as it happens</li>
+            <li>Answer <code>input()</code> prompts right inline</li>
+            <li>A Stop button for loops that won't quit</li>
+            <li>An interactive console (REPL) that keeps your variables</li>
+          </ul>
+        </article>
+
+        <article class="coil feature">
+          <h3><span class="glyph" aria-hidden="true">[ ]</span>Notebooks</h3>
+          <ul>
+            <li>Open and save <code>.ipynb</code> files (Jupyter-compatible)</li>
+            <li>Code and Markdown cells</li>
+            <li>Run cell, run all, restart kernel</li>
+            <li>pandas DataFrames as real tables, matplotlib plots inline</li>
+            <li>Export as a <code>.py</code> script</li>
+          </ul>
+        </article>
+
+        <article class="coil feature">
+          <h3><span class="glyph" aria-hidden="true">np</span>Packages, built in</h3>
+          <p>The full standard library and numpy, plus pandas and matplotlib with Pro. Everything is bundled, so <code>import</code> just works. There's no pip and nothing to download.</p>
+        </article>
+
+        <article class="coil feature">
+          <h3><span class="glyph" aria-hidden="true">&#8635;</span>Turtle graphics</h3>
+          <p>The standard <code>turtle</code> API draws on a built-in canvas. Spirals, stars and fractals, straight from the code you'd write on a laptop.</p>
+        </article>
+
+        <article class="coil feature">
+          <h3><span class="glyph" aria-hidden="true">12</span>Learn Python</h3>
+          <p>Twelve short lessons that check your answers automatically, plus ready-to-run examples: a rainbow spiral, guess the number, a prime sieve, estimating pi with numpy, the Mandelbrot set, a word counter and a weather-station notebook.</p>
+        </article>
+
+        <article class="coil feature">
+          <h3><span class="glyph" aria-hidden="true">/</span>Your files, your folders</h3>
+          <p>Projects are plain folders that also show up in the Files app under On My iPhone › Coilbook. Open <code>.py</code> and <code>.ipynb</code> files from Files, Mail or AirDrop.</p>
+        </article>
+
+        <article class="coil feature">
+          <h3><span class="glyph" aria-hidden="true">?</span>Explain error <small class="meta">&nbsp;Pro</small></h3>
+          <p>Stuck on a traceback? Get a plain-language explanation from Apple Intelligence, running on your device. Your code isn't sent anywhere. Needs a device that supports Apple Intelligence.</p>
+        </article>
+
+        <article class="coil feature">
+          <h3><span class="glyph" aria-hidden="true">#</span>Private by design</h3>
+          <p>No account, no ads, no analytics, no tracking. Your code and files stay on your iPhone. <a href="privacy.html">Read the privacy policy</a>.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="packages" aria-labelledby="packages-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag"># import this</span>
+        <h2 id="packages-title">What you can <code>import</code></h2>
+        <p>The whole standard library, plus these packages, packaged for iPhone and ready offline.</p>
+      </div>
+      <ul class="pkgs" aria-label="Bundled packages">
+        <li>numpy</li>
+        <li class="pro">pandas</li>
+        <li class="pro">matplotlib</li>
+        <li>Pillow</li>
+        <li>contourpy</li>
+        <li>kiwisolver</li>
+        <li>fonttools</li>
+        <li>cycler</li>
+        <li>pyparsing</li>
+        <li>python-dateutil</li>
+        <li>pytz</li>
+        <li>tzdata</li>
+        <li>six</li>
+        <li>packaging</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="pricing" aria-labelledby="pricing-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag"># free vs pro</span>
+        <h2 id="pricing-title">Free to run. Pro when you want more.</h2>
+        <p>The free version isn't a trial and doesn't run out. Pro is for data work and anyone who wants unlimited notebooks.</p>
+      </div>
+
+      <div class="table-scroll">
+        <table class="plans">
+          <caption class="visually-hidden">What's included in Coilbook Free and Coilbook Pro</caption>
+          <thead>
+            <tr><th scope="col">Feature</th><th scope="col">Free</th><th scope="col" class="pro-col">Pro</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Editor, console and interactive console</th><td class="yes">&#10003;<span class="visually-hidden"> Included</span></td><td class="yes">&#10003;<span class="visually-hidden"> Included</span></td></tr>
+            <tr><th scope="row">Run unlimited code</th><td class="yes">&#10003;<span class="visually-hidden"> Included</span></td><td class="yes">&#10003;<span class="visually-hidden"> Included</span></td></tr>
+            <tr><th scope="row">Standard library and numpy</th><td class="yes">&#10003;<span class="visually-hidden"> Included</span></td><td class="yes">&#10003;<span class="visually-hidden"> Included</span></td></tr>
+            <tr><th scope="row">Turtle graphics</th><td class="yes">&#10003;<span class="visually-hidden"> Included</span></td><td class="yes">&#10003;<span class="visually-hidden"> Included</span></td></tr>
+            <tr><th scope="row">12 lessons and all examples</th><td class="yes">&#10003;<span class="visually-hidden"> Included</span></td><td class="yes">&#10003;<span class="visually-hidden"> Included</span></td></tr>
+            <tr><th scope="row">Projects</th><td>3</td><td>Unlimited</td></tr>
+            <tr><th scope="row">Notebooks you create</th><td>1</td><td>Unlimited</td></tr>
+            <tr><th scope="row">pandas and matplotlib</th><td class="no">&mdash;<span class="visually-hidden"> Not included</span></td><td class="yes">&#10003;<span class="visually-hidden"> Included</span></td></tr>
+            <tr><th scope="row">Editor themes: Sand, Moss, Plum, Contrast</th><td class="no">&mdash;<span class="visually-hidden"> Not included</span></td><td class="yes">&#10003;<span class="visually-hidden"> Included</span></td></tr>
+            <tr><th scope="row">Explain error with Apple Intelligence*</th><td class="no">&mdash;<span class="visually-hidden"> Not included</span></td><td class="yes">&#10003;<span class="visually-hidden"> Included</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prices" aria-label="Coilbook Pro prices">
+        <div class="price"><b>$3.99</b><span>per month</span></div>
+        <div class="price"><b>$24.99</b><span>per year</span></div>
+        <div class="price"><b>$49.99</b><span>lifetime, one-time purchase</span></div>
+      </div>
+      <p class="fineprint" style="margin-top:14px">US prices; the App Store shows your local price. No free trial: the free version is yours to try for as long as you like. Subscriptions renew automatically until cancelled. *Explain error only works on devices that support Apple Intelligence.</p>
+    </div>
+  </section>
+
+  <section id="guides" aria-labelledby="guides-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag"># guides</span>
+        <h2 id="guides-title">Guides</h2>
+        <p>Short how-tos for running and learning Python on your iPhone.</p>
+      </div>
+      <ul class="g-list">
+<li><a href="guides/how-to-run-python-on-iphone.html">How to run Python code on an iPhone</a><span>Your three options for running Python on a phone, what to check before choosing, and a first script to try offline.</span></li>
+<li><a href="guides/how-to-open-ipynb-files-on-iphone.html">How to open .ipynb files on an iPhone</a><span>What an .ipynb file is, three ways to open one on a phone, common problems, and how to run and edit it offline.</span></li>
+<li><a href="guides/how-to-learn-python-on-your-iphone.html">How to learn Python on your phone</a><span>A sensible order of topics, how to practice in short sessions, how to read errors, and how to start offline on an iPhone.</span></li>
+      </ul>
+      <p><a href="guides/">All Coilbook guides</a></p>
+    </div>
+  </section>
+
+  <section id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag"># faq</span>
+        <h2 id="faq-title">Questions, answered</h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>Can I run Python on iPhone or iPad offline?</summary>
+          <div>
+            <p>Yes. Coilbook includes a full CPython 3.14 interpreter that runs on the device itself, so scripts, notebooks, the console and the lessons all work with no internet connection. It's made for iPhone, and iPad can run it as an iPhone app.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Is it real Python?</summary>
+          <div>
+            <p>Yes. It's CPython 3.14, the reference implementation, with the full standard library. Code you write in Coilbook is ordinary Python, so it runs the same way on a Mac or PC.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Does it support pip?</summary>
+          <div>
+            <p>No. Coilbook doesn't download packages from the internet. Instead it ships with the full standard library plus numpy, pandas and matplotlib (and their dependencies: Pillow, contourpy, kiwisolver, fonttools, cycler, pyparsing, python-dateutil, pytz, tzdata, six and packaging), all built in and ready to <code>import</code>. pandas and matplotlib need Pro.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can I open Jupyter notebooks?</summary>
+          <div>
+            <p>Yes. Coilbook opens and saves <code>.ipynb</code> files in the Jupyter-compatible format, with code and Markdown cells, inline results, pandas tables and matplotlib plots. You can also export a notebook as a <code>.py</code> script. Open notebooks from the Files app, Mail or AirDrop. (Coilbook is an independent app and isn't affiliated with Project Jupyter.)</p>
+          </div>
+        </details>
+        <details>
+          <summary>Does <code>input()</code> work?</summary>
+          <div>
+            <p>Yes. When your program asks for input, the prompt appears in the console and you type the answer right there, just like in a terminal.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What's free, and what does Pro add?</summary>
+          <div>
+            <p>Free: the editor, unlimited code runs, the standard library, numpy, turtle, the console, all lessons and examples, 3 projects and 1 notebook you create. Pro adds pandas and matplotlib, unlimited notebooks and projects, four editor themes and Explain error. Pro is $3.99 a month, $24.99 a year or $49.99 once for lifetime.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Do I need an account? Is my code private?</summary>
+          <div>
+            <p>No account is needed. There are no ads, no analytics and no tracking, and your code and files stay on your iPhone. Details are in the <a href="privacy.html">privacy policy</a>.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="cta-title">
+    <div class="wrap">
+      <div class="coil" style="padding-top:30px;padding-bottom:30px">
+        <h2 id="cta-title">Open a fresh page and press Run.</h2>
+        <p style="color:var(--ink-2)">Coilbook is free to download and free to run, for good.</p>
+        <a class="btn btn-primary" href="https://apps.apple.com/app/id6818796872">Get Coilbook on the App Store</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <p style="margin:0">&copy; 2026 Levani Topchishvili · <a href="mailto:levan.topchishvili9@gmail.com">levan.topchishvili9@gmail.com</a></p>
+      <ul class="footer-links">
+        <li><a href="./">Home</a></li>
+        <li><a href="help.html">Help</a></li>
+        <li><a href="guides/">Guides</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="licenses.html">Licenses</a></li>
+      </ul>
+    </div>
+    <p class="trademark">&ldquo;Python&rdquo; is a registered trademark of the Python Software Foundation. Coilbook is not affiliated with or endorsed by the Python Software Foundation. Jupyter is a trademark of NumFOCUS; Coilbook is not affiliated with Project Jupyter. Apple, iPhone, iPad, App Store and Apple Intelligence are trademarks of Apple Inc.</p>
+  </div>
+</footer>
+</body>
+</html>

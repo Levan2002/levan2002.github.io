@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Help &amp; guides – Coilbook</title>
+  <meta name="description" content="How to run Python on iPhone with Coilbook: input(), .ipynb notebooks, pandas and matplotlib, turtle graphics, the Files app, the keyboard row, stopping a program, restoring purchases and support.">
+  <link rel="canonical" href="https://levan2002.github.io/coilbook/help.html">
+  <meta name="theme-color" content="#F7F5F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#15131C" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Coilbook">
+  <meta property="og:title" content="Coilbook help: run Python on iPhone">
+  <meta property="og:description" content="Guides for the Coilbook editor, console and .ipynb notebooks on iPhone.">
+  <meta property="og:url" content="https://levan2002.github.io/coilbook/help.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#6A4DF5"/><rect x="15" y="12" width="37" height="40" rx="5" fill="#F7F5F0"/><path d="M23 25l7 6-7 6" fill="none" stroke="#6A4DF5" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M33 39h11" stroke="#1B1923" stroke-width="4.5" stroke-linecap="round"/></svg>
+      Coilbook
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="./">Home</a></li>
+        <li><a href="help.html" aria-current="page">Help</a></li>
+        <li><a href="guides/">Guides</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <header class="page-head">
+      <span class="tag"># help</span>
+      <h1>Help &amp; guides</h1>
+      <p>Short, practical guides for running Python on your iPhone with Coilbook. Can't find your answer? <a href="#contact">Write to me</a>, I read every message.</p>
+    </header>
+
+    <div class="doc">
+      <nav class="toc" aria-label="On this page">
+        <h2>On this page</h2>
+        <ol>
+          <li><a href="#run-python-on-iphone">Run Python on iPhone</a></li>
+          <li><a href="#input">Using input()</a></li>
+          <li><a href="#notebooks">Notebooks (.ipynb)</a></li>
+          <li><a href="#pandas-matplotlib">pandas &amp; matplotlib</a></li>
+          <li><a href="#turtle-graphics">Turtle graphics</a></li>
+          <li><a href="#files">Files &amp; the Files app</a></li>
+          <li><a href="#keyboard-autocomplete">Keyboard row &amp; autocomplete</a></li>
+          <li><a href="#stop-program">Stop a running program</a></li>
+          <li><a href="#lessons">Lessons &amp; examples</a></li>
+          <li><a href="#explain-error">Explain error</a></li>
+          <li><a href="#restore-purchases">Restoring purchases</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ol>
+      </nav>
+
+      <div class="prose">
+
+        <section id="run-python-on-iphone" class="coil" aria-labelledby="h-run">
+          <h2 id="h-run"><a class="anchor" href="#run-python-on-iphone">Run Python on iPhone</a></h2>
+          <p>Coilbook runs CPython 3.14 directly on your iPhone. Nothing is sent to a server, so it works the same in airplane mode.</p>
+          <ol>
+            <li>Open the <strong>Files</strong> tab and create a project, or tap <strong>New Script</strong>.</li>
+            <li>Type your code. Here's a classic to start with:</li>
+          </ol>
+          <figure class="code">
+            <div class="code-bar"><span>squares.py</span></div>
+<pre><code><span class="l"><span class="k">for</span> n <span class="k">in</span> <span class="f">range</span>(<span class="n">1</span>, <span class="n">6</span>):</span><span class="l">    <span class="f">print</span>(n, n ** <span class="n">2</span>)</span></code></pre>
+          </figure>
+          <ol start="3" style="margin-top:1em">
+            <li>Tap <strong>Run</strong>. Output appears in the console below your code.</li>
+          </ol>
+          <h3>The interactive console</h3>
+          <p>The <strong>Console</strong> tab is a Python REPL: type a line, get the result right away. Variables stay around between commands, which makes it handy for quick sums, trying out a function or poking at a list.</p>
+        </section>
+
+        <section id="input" class="coil" aria-labelledby="h-input">
+          <h2 id="h-input"><a class="anchor" href="#input">Using <code>input()</code> on iPhone</a></h2>
+          <p>Programs that ask questions work the way they do in a terminal. When your code calls <code>input()</code>, the prompt shows up in the console and you type the answer inline, then send it. Your program carries on with what you typed.</p>
+          <figure class="code">
+            <div class="code-bar"><span>guess.py</span></div>
+<pre><code><span class="l"><span class="k">import</span> random</span><span class="l">secret = random.<span class="f">randint</span>(<span class="n">1</span>, <span class="n">10</span>)</span><span class="l">guess = <span class="f">int</span>(<span class="f">input</span>(<span class="s">"Pick 1-10: "</span>))</span><span class="l"><span class="f">print</span>(<span class="s">"Yes!"</span> <span class="k">if</span> guess == secret <span class="k">else</span> <span class="s">f"Nope, it was {secret}"</span>)</span></code></pre>
+          </figure>
+          <p style="margin-top:1em">Remember that <code>input()</code> always returns text. Wrap it in <code>int()</code> or <code>float()</code> when you need a number.</p>
+        </section>
+
+        <section id="notebooks" class="coil" aria-labelledby="h-nb">
+          <h2 id="h-nb"><a class="anchor" href="#notebooks">Notebooks (.ipynb) on iPhone</a></h2>
+          <p>Coilbook opens and saves <code>.ipynb</code> files in the Jupyter-compatible format, so notebooks move freely between your iPhone and a computer.</p>
+          <ul>
+            <li><strong>Cells:</strong> add code cells for Python and text cells for Markdown notes.</li>
+            <li><strong>Running:</strong> run one cell, use <strong>Run All</strong> to go top to bottom, or <strong>Restart Kernel</strong> for a clean slate.</li>
+            <li><strong>Results:</strong> the value of a cell's last line appears under it. pandas DataFrames show as real tables and matplotlib plots appear inline.</li>
+            <li><strong>Export:</strong> share a notebook as an <code>.ipynb</code> file, or as a plain Python script with <strong>Share as Python Script</strong>.</li>
+          </ul>
+          <p>To open a notebook someone sent you, tap it in Files, Mail or AirDrop and choose Coilbook. Opening or importing a notebook is never blocked. The free version keeps 1 notebook in your files (imported ones count, the bundled examples don't); Pro makes notebooks unlimited.</p>
+          <p class="note">Coilbook is an independent app. It reads the Jupyter notebook format but isn't affiliated with Project Jupyter.</p>
+        </section>
+
+        <section id="pandas-matplotlib" class="coil" aria-labelledby="h-pd">
+          <h2 id="h-pd"><a class="anchor" href="#pandas-matplotlib">pandas &amp; matplotlib on iPhone</a></h2>
+          <p>With Coilbook Pro, pandas and matplotlib are built in. No installing, no internet. They work best in a notebook, where tables and charts render right under each cell.</p>
+          <figure class="code">
+            <div class="code-bar"><span>weather.ipynb</span></div>
+<pre><code><span class="l"><span class="k">import</span> pandas <span class="k">as</span> pd</span><span class="l"><span class="k">import</span> matplotlib.pyplot <span class="k">as</span> plt</span><span class="l"> </span><span class="l">df = pd.<span class="f">DataFrame</span>({<span class="s">"day"</span>: [<span class="s">"Mon"</span>, <span class="s">"Tue"</span>, <span class="s">"Wed"</span>],</span><span class="l">                   <span class="s">"temp"</span>: [<span class="n">14</span>, <span class="n">17</span>, <span class="n">12</span>]})</span><span class="l">df.<span class="f">plot</span>(x=<span class="s">"day"</span>, y=<span class="s">"temp"</span>)</span><span class="l">plt.<span class="f">show</span>()</span></code></pre>
+          </figure>
+          <p style="margin-top:1em">numpy is included in the free version. Matplotlib's helpers (Pillow, contourpy, kiwisolver, fonttools, cycler, pyparsing) and pandas' helpers (python-dateutil, pytz, tzdata, six) come bundled too. There's no <code>pip</code>, so packages outside this list can't be added.</p>
+        </section>
+
+        <section id="turtle-graphics" class="coil" aria-labelledby="h-turtle">
+          <h2 id="h-turtle"><a class="anchor" href="#turtle-graphics">Turtle graphics on iPhone and iPad</a></h2>
+          <p>Coilbook supports the standard <code>turtle</code> module and draws on a built-in canvas, so classroom turtle exercises run unchanged. It's free.</p>
+          <figure class="code">
+            <div class="code-bar"><span>star.py</span></div>
+<pre><code><span class="l"><span class="k">import</span> turtle</span><span class="l"> </span><span class="l">t = turtle.<span class="f">Turtle</span>()</span><span class="l">t.<span class="f">color</span>(<span class="s">"purple"</span>)</span><span class="l"><span class="k">for</span> _ <span class="k">in</span> <span class="f">range</span>(<span class="n">36</span>):</span><span class="l">    t.<span class="f">forward</span>(<span class="n">120</span>)</span><span class="l">    t.<span class="f">left</span>(<span class="n">170</span>)</span></code></pre>
+          </figure>
+          <p style="margin-top:1em">For something more colourful, open the <em>Rainbow spiral</em> example in the Learn tab. Coilbook is an iPhone app; on iPad it runs as an iPhone app, turtle included.</p>
+        </section>
+
+        <section id="files" class="coil" aria-labelledby="h-files">
+          <h2 id="h-files"><a class="anchor" href="#files">Files and the Files app</a></h2>
+          <p>Every project is an ordinary folder. Open Apple's Files app and go to <strong>On My iPhone › Coilbook</strong> to find them: copy, move, zip or share files like any others.</p>
+          <ul>
+            <li><strong>Open from anywhere:</strong> tap a <code>.py</code> or <code>.ipynb</code> file in Files, Mail or AirDrop and choose Coilbook.</li>
+            <li><strong>Import:</strong> in Coilbook's Files tab, use <strong>Import from Files</strong> to bring in a file.</li>
+          </ul>
+          <p>The free version includes 3 projects; Pro gives you unlimited. Because files live on your iPhone, they're included in your normal device backups and are removed if you delete the app, so keep copies of anything important.</p>
+        </section>
+
+        <section id="keyboard-autocomplete" class="coil" aria-labelledby="h-kb">
+          <h2 id="h-kb"><a class="anchor" href="#keyboard-autocomplete">Keyboard row &amp; autocomplete</a></h2>
+          <p>An extra row above the keyboard puts the characters Python needs one tap away:</p>
+          <p><kbd>Tab</kbd> <kbd>(</kbd> <kbd>)</kbd> <kbd>[</kbd> <kbd>]</kbd> <kbd>{</kbd> <kbd>}</kbd> <kbd>:</kbd> <kbd>"</kbd> <kbd>'</kbd> <kbd>&larr;</kbd> <kbd>&rarr;</kbd> <kbd>Undo</kbd></p>
+          <p>As you type, autocomplete suggests keywords, builtins and module members. Type <code>np.lin</code> and <code>np.linspace</code> is waiting. Use <strong>Find and Replace</strong> to rename a variable across a file. Text size, line numbers and line wrapping can be changed in Settings.</p>
+        </section>
+
+        <section id="stop-program" class="coil" aria-labelledby="h-stop">
+          <h2 id="h-stop"><a class="anchor" href="#stop-program">Stop a running program</a></h2>
+          <p>Accidentally wrote <code>while True:</code>? Tap <strong>Stop</strong>. Coilbook halts the program and keeps whatever it printed so far, so you can see where it got to. In a notebook, stop the running cell the same way, or use <strong>Restart Kernel</strong> to clear every variable and start fresh.</p>
+        </section>
+
+        <section id="lessons" class="coil" aria-labelledby="h-learn">
+          <h2 id="h-learn"><a class="anchor" href="#lessons">Lessons &amp; examples</a></h2>
+          <p>The <strong>Learn</strong> tab has 12 short Python lessons. Each ends with a small exercise that Coilbook checks automatically, and you can peek at a solution if you're stuck. The examples are complete programs to run and tinker with: rainbow spiral, guess the number, prime sieve, estimating pi with numpy, the Mandelbrot set, a word counter and a weather-station notebook.</p>
+        </section>
+
+        <section id="explain-error" class="coil" aria-labelledby="h-explain">
+          <h2 id="h-explain"><a class="anchor" href="#explain-error">Explain error (Pro)</a></h2>
+          <p>When a program stops with a traceback, tap <strong>Explain</strong> to get a plain-language explanation of what went wrong. It uses Apple Intelligence through Apple's on-device Foundation Models, so your code never leaves your iPhone. This feature needs a device that supports Apple Intelligence, with Apple Intelligence turned on.</p>
+        </section>
+
+        <section id="restore-purchases" class="coil" aria-labelledby="h-restore">
+          <h2 id="h-restore"><a class="anchor" href="#restore-purchases">Restoring purchases</a></h2>
+          <p>Got a new iPhone or reinstalled Coilbook? Open the <strong>Settings</strong> tab and tap <strong>Restore Purchases</strong>. Make sure you're signed in to the App Store with the same Apple Account you used to buy Pro.</p>
+          <ul>
+            <li><strong>Lifetime</strong> is a one-time purchase and can be shared with your family through Family Sharing.</li>
+            <li><strong>Monthly and yearly</strong> subscriptions renew automatically. Manage or cancel them in <strong>Settings › Apple Account › Subscriptions</strong> on your iPhone.</li>
+            <li>Refunds are handled by Apple at <a href="https://reportaproblem.apple.com/">reportaproblem.apple.com</a>.</li>
+          </ul>
+        </section>
+
+        <section id="contact" class="coil" aria-labelledby="h-contact">
+          <h2 id="h-contact"><a class="anchor" href="#contact">Contact</a></h2>
+          <p>Coilbook is made by one person, Levani Topchishvili. For questions, bug reports or ideas, email <a href="mailto:levan.topchishvili9@gmail.com">levan.topchishvili9@gmail.com</a>.</p>
+          <p>For bugs, it helps to include your iPhone model, iOS version, and a small piece of code that shows the problem.</p>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <p style="margin:0">&copy; 2026 Levani Topchishvili · <a href="mailto:levan.topchishvili9@gmail.com">levan.topchishvili9@gmail.com</a></p>
+      <ul class="footer-links">
+        <li><a href="./">Home</a></li>
+        <li><a href="help.html">Help</a></li>
+        <li><a href="guides/">Guides</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="licenses.html">Licenses</a></li>
+      </ul>
+    </div>
+    <p class="trademark">&ldquo;Python&rdquo; is a registered trademark of the Python Software Foundation. Coilbook is not affiliated with or endorsed by the Python Software Foundation. Jupyter is a trademark of NumFOCUS; Coilbook is not affiliated with Project Jupyter. Apple, iPhone, iPad, App Store and Apple Intelligence are trademarks of Apple Inc.</p>
+  </div>
+</footer>
+</body>
+</html>
