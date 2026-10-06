@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How spaced repetition works | Brightdeck</title>
+<meta name="description" content="Spaced repetition and FSRS explained in plain words, plus how exam mode caps intervals so every card comes back before your test.">
+<link rel="canonical" href="https://levan2002.github.io/brightdeck/guides/how-spaced-repetition-works.html">
+<meta name="apple-itunes-app" content="app-id=6819474071">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Brightdeck">
+<meta property="og:title" content="How spaced repetition works | Brightdeck">
+<meta property="og:description" content="Spaced repetition and FSRS explained in plain words, plus how exam mode caps intervals so every card comes back before your test.">
+<meta property="og:url" content="https://levan2002.github.io/brightdeck/guides/how-spaced-repetition-works.html">
+<meta property="og:image" content="https://levan2002.github.io/brightdeck/icon.svg">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Brightdeck", "item": "https://levan2002.github.io/brightdeck/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://levan2002.github.io/brightdeck/guides/index.html"}, {"@type": "ListItem", "position": 3, "name": "How spaced repetition works", "item": "https://levan2002.github.io/brightdeck/guides/how-spaced-repetition-works.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How spaced repetition works", "description": "Spaced repetition and FSRS explained in plain words, plus how exam mode caps intervals so every card comes back before your test.", "author": {"@type": "Person", "name": "Levani Topchishvili"}, "datePublished": "2026-10-06", "dateModified": "2026-10-06", "mainEntityOfPage": "https://levan2002.github.io/brightdeck/guides/how-spaced-repetition-works.html", "image": "https://levan2002.github.io/brightdeck/icon.svg", "publisher": {"@type": "Person", "name": "Levani Topchishvili"}}</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<a class="brand" href="../index.html"><img src="../icon.svg" alt="" width="34" height="34">Brightdeck</a>
+<nav aria-label="Main"><a href="../guides/index.html">Guides</a><a href="../index.html#support">Support</a></nav>
+</header>
+<main>
+<p class="crumbs"><a href="../index.html">Brightdeck</a> / <a href="index.html">Guides</a> / How spaced repetition works</p>
+<article class="card">
+<h1>How spaced repetition works</h1>
+<p class="meta">By Levani Topchishvili &middot; 6 October 2026</p>
+<div style="margin-top:18px">
+
+<p>Most of what you study is forgotten faster than you expect. Spaced repetition is a way of studying that works with that fact instead of against it. This guide explains the idea, how Brightdeck's scheduler (FSRS) decides when to show a card, and how exam mode keeps you ready for a specific date.</p>
+
+<h2>The basic idea</h2>
+<p>When you learn something, you start forgetting it right away. Each time you recall it successfully, though, the memory lasts longer before it fades. So the best moment to review a card is not now, and not never. It is shortly before you would have forgotten it. Review too early and you waste time; review too late and you are relearning from scratch.</p>
+<p>That is spaced repetition: a card you find easy comes back after a longer and longer gap, such as a few days, then a few weeks, then months. A card you keep missing comes back soon. Your daily session is mostly the cards that are about to slip.</p>
+
+<h2>What you do in a session</h2>
+<p>You see the front of a card, try to recall the answer, then flip it and tell Brightdeck how it went with one of four ratings:</p>
+<ul>
+<li><strong>Again:</strong> you did not remember it. The card returns soon.</li>
+<li><strong>Hard:</strong> you got it, but it took effort.</li>
+<li><strong>Good:</strong> you remembered it as expected. This is the rating you will use most.</li>
+<li><strong>Easy:</strong> it was effortless. The next gap grows a lot.</li>
+</ul>
+<p>New cards go through learning steps first: a card you have just met comes back after 1 minute and then after 10 minutes, before it enters the longer schedule. Being honest with the ratings matters more than anything else. Pressing Good when you guessed only tricks the scheduler.</p>
+
+<h2>What FSRS is</h2>
+<p>FSRS stands for Free Spaced Repetition Scheduler. It is an open algorithm, and modern desktop flashcard apps use it too. Older schedulers apply fixed multipliers: a card you answered well gets its gap multiplied by a set number. FSRS instead keeps a small model of your memory for each card.</p>
+<p>It tracks two things per card:</p>
+<ul>
+<li><strong>Stability:</strong> roughly how long this memory lasts. A stable card can go a long time without review.</li>
+<li><strong>Difficulty:</strong> how hard this particular card is for you. Hard cards grow their intervals more slowly.</li>
+</ul>
+<p>From those it estimates the chance that you still remember the card at any moment. The scheduler then picks the date on which that chance falls to your chosen target.</p>
+
+<h2>Choosing how much to remember</h2>
+<p>That target is the <strong>desired retention</strong>. In Brightdeck the default is 90%, which means each card is scheduled for the day you would still remember it nine times out of ten. You can change it per deck, anywhere from 80% to 97%.</p>
+<ul>
+<li><strong>Lower (80 to 85%):</strong> fewer reviews, longer gaps, more forgotten cards that you must relearn. Good for casual material.</li>
+<li><strong>Default (90%):</strong> a balanced choice for most decks.</li>
+<li><strong>Higher (95 to 97%):</strong> noticeably more reviews. Worth it for material where forgetting is costly.</li>
+</ul>
+<p>The relationship is not linear: squeezing out the last few percent costs far more reviews than the first ones. Start at 90% and adjust only if the daily workload or your results tell you to.</p>
+
+<h2>Exam mode: when there is a deadline</h2>
+<p>Ordinary scheduling assumes you want to remember things indefinitely, so intervals can stretch to months. If your test is in three weeks, a card due in two months is a card you will not see before the exam.</p>
+<p>In exam mode you set an <strong>exam date</strong> on a deck. Brightdeck then caps the intervals so that every card comes back before that date. The deck also shows an <strong>exam readiness</strong> percentage: the predicted share of your cards you would remember on exam day. It is an estimate, not a guarantee, but it is a useful number to watch. If it is lower than you would like, there are three levers: study more regularly, raise the retention target, or add time before the date.</p>
+<p>After the exam you can remove the date and the deck goes back to long intervals.</p>
+
+<h2>Habits that make it work</h2>
+<ol>
+<li><strong>Do your reviews every day.</strong> Short daily sessions beat long weekend ones. A reminder at a fixed time helps, and Brightdeck can send one.</li>
+<li><strong>Keep cards small.</strong> One fact per card is far easier to rate honestly than a paragraph. Use Fill the blank to pull one idea out of a longer sentence.</li>
+<li><strong>Answer before you flip.</strong> Try to recall first. For exact answers, the Type the answer card makes you commit.</li>
+<li><strong>Do not skip Again.</strong> Marking a miss is how the scheduler learns what is hard.</li>
+<li><strong>Add pictures where they help.</strong> Diagrams and labelled images, including image occlusion in Pro, work well for anatomy, maps and similar topics.</li>
+</ol>
+
+<h2>What to expect</h2>
+<p>In the first week the workload feels heavy, because many cards are new and keep returning. After a few weeks most of your reviews are cards with long gaps, and a small amount of daily time maintains a large deck. Brightdeck Pro's Insights shows your retention over 30 days, the next 30 days of reviews, and your hardest cards, so you can see whether the settings suit you.</p>
+
+</div>
+</article>
+<section class="card">
+<h2>Try it in Brightdeck</h2>
+<p>Brightdeck is free to study with, with no ads and no account. Give your cards a go on iPhone or iPad.</p>
+<p><a class="btn" href="https://apps.apple.com/app/id6819474071">Get Brightdeck on the App Store</a></p>
+<h3>More guides</h3>
+<ul>
+<li><a href="how-to-import-anki-decks-on-iphone.html">How to import Anki decks on iPhone</a></li>
+<li><a href="how-to-move-quizlet-flashcards-to-brightdeck.html">How to move Quizlet flashcards to Brightdeck</a></li>
+<li><a href="index.html">All guides</a></li>
+</ul>
+</section>
+</main>
+</div>
+<footer>
+<nav aria-label="Footer"><a href="../index.html">Home</a><a href="../guides/index.html">Guides</a><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../index.html#support">Support</a></nav>
+<p>&copy; 2026 Levani Topchishvili</p>
+</footer>
+</body>
+</html>
