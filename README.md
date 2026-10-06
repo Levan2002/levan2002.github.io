@@ -29,3 +29,4 @@ Each folder was imported on 2026-10-06 from its own repo (now archived), so ever
 | Latchkey Authenticator | [latchkey/](latchkey/) | https://levan2002.github.io/latchkey/ | Levan2002/latchkey @ e944551 |
 | Unfollowers Check: Backfollow | [backfollow/](backfollow/) | https://levan2002.github.io/backfollow/ | Levan2002/backfollow @ f4b0919 |
 | Brightdeck Flashcards | [brightdeck/](brightdeck/) | https://levan2002.github.io/brightdeck/ | new (2026-10-06) |
+| Tempoline Golf Swing Analyzer | [tempoline/](tempoline/) | https://levan2002.github.io/tempoline/ | new (2026-10-06) |
